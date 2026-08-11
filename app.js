@@ -612,3 +612,19 @@ function showToast(message) {
         setTimeout(() => toast.remove(), 300);
     }, 3000);
 }
+
+// Live Storage Event Listener (Syncs changes made in admin.html live across browser tabs)
+window.addEventListener('storage', (e) => {
+    if (e.key === 'products') {
+        products = JSON.parse(e.newValue) || defaultProducts;
+        applyFilters();
+    }
+    if (e.key === 'storeConfig') {
+        storeConfig = JSON.parse(e.newValue) || DEFAULT_CONFIG;
+        applySiteSettings();
+        renderCategoriesUI();
+    }
+    if (e.key === 'spotlightConfig') {
+        renderSpotlightHero();
+    }
+});
