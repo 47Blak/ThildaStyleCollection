@@ -1,0 +1,15 @@
+{
+  "name": "Thilda StyleCollection",
+  "short_name": "Thilda",
+  "start_url": "./index.html",
+  "display": "standalone",
+  "background_color": "#f8fafc",
+  "theme_color": "#0f172a",
+  "icons": [
+    {
+      "src": "https://pbs.twimg.com/media/HPc02ElXcAA8Tv1?format=jpg&name=small",
+      "sizes": "192x192",
+      "type": "image/jpeg"
+    }
+  ]
+}
